@@ -17,7 +17,7 @@
 
    1) Download PuTTY from putty.org website.
    2) You will come across the following interface after succesfull installation.
---------------------------Add image -------------------------------\
+![This is an image]((https://github.com/prateekbashista/ESE-5190-Documents/blob/53a1edeef07725327bd3cc7d03579aea864eac69/putty%20nominal.png))
    4) Enter the following configuration as stated by Adafruit Organisation on the following website regarding seting up other serial consoles than MU REPL
       - Link: https://learn.adafruit.com/welcome-to-circuitpython/advanced-serial-console-on-windows 
       - Serial Line: COM# (# = COM number on which the board is situated in your laptop - Visible in Device Manager)
