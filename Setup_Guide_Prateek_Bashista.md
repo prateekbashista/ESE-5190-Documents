@@ -52,6 +52,7 @@ D:\> git submodule update --init
 D:\> cd ..
 D:\> git clone -b master https://github.com/raspberrypi/pico-examples.git
 ```
+![This is an image](https://github.com/prateekbashista/ESE-5190-Documents/blob/c6fe4c4e2a5eb08c0327e8d06fe98c490b018dc5/getting%20sdk%20and%20examples.png)
 
 8) Launch VS code thorugh that command prompt using C:> code command.
 9) Inside, VS Code , Install CMake tools by Microsoft Corporation.
