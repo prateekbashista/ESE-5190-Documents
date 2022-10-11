@@ -17,18 +17,20 @@
 
    1) Download PuTTY from putty.org website.
    2) You will come across the following interface after succesfull installation.
+   
 ![This is an image](https://github.com/prateekbashista/ESE-5190-Documents/blob/53a1edeef07725327bd3cc7d03579aea864eac69/putty%20nominal.png)
-   4) Enter the following configuration as stated by Adafruit Organisation on the following website regarding seting up other serial consoles than MU REPL
+
+   3) Enter the following configuration as stated by Adafruit Organisation on the following website regarding seting up other serial consoles than MU REPL
       - Link: https://learn.adafruit.com/welcome-to-circuitpython/advanced-serial-console-on-windows 
       - Serial Line: COM# (# = COM number on which the board is situated in your laptop - Visible in Device Manager)
       - Connection Type: Serial
       - Speed: 115200
       - Save the following session for easy access each time Name: " Qt Py Board" in Saved Sessions Dialog Box
-   5) Click Open
-       Folowing Screen Should Appear:
----------------------------------------------Insert Image of Console-------------------\
-      
-   5) Your Serial Console is setup.
+
+![This is an image](https://github.com/prateekbashista/ESE-5190-Documents/blob/a0ed3d065518e1bae71b322aa95fe7b5ac253d7c/putty%20saved%20state.png)
+
+   5) Click Open    
+   6) Your Serial Console is setup.
    
 #### B) Setting up the board to work with C/C++
 
@@ -36,18 +38,29 @@ Following softwares were installed to make the board programming compatible ,and
 1) ARM GNU Toolchain  - Compatible development tools for C/C++/ARM languages targeting ARM chipset - Installed "arm-gnu-toolchain-12.2.MPACBTI-Bet1-mingw-w64-i686-arm-none-eabi.exe"
 2) CMake - open source software for build automation - Installed 	"cmake-3.24.2-windows-x86_64.msi"
 3) Build Tools for Visual Studio 2022 - Development tools for C/C++. It provides us with developer comand prompt thorugh which we can set environment variables etc and launch the VS Code in that configuration.
-4) Python - Installed - 
-5) Git - Version control software
-6) Launch Visual Studio 2022 developer COmmand Window
-7) Launch VS code thorugh that command prompt using C:> code command.
-8) Inside, VS Code , Install CMake tools by Microsoft Corporation.
-9) Go to extension settings.
-10) Scroll down to CMake: Configure Environment. Set Item to "PICO_SDK_PATH" and Value to "..\..\pico-sdk"
-11) Scorll down to CMake: Generator. Set Value to "NMake Makefiles'.
-12) Go back to home. You will get a dialog box in bottom right of the screen asking " would like to configure project "pico-examples" ". CLick Yes.
-13) In compiler choices , select "GCC for arm-none-eabi".
-14) After configuration is done, look for a build button on bottom blue bar of the VS Code Window like as follows. Press build.
-15) This Step will build the entire pico_examples directory and save the build files namely .uf2, .elf,.bin to build folder inside the said folder.
+4) Python - Installed - Version 3.10
+5) Git - Version control software - Installed
+6) Launch Visual Studio 2022 Developer Command Window
+
+![This is an image](https://github.com/prateekbashista/ESE-5190-Documents/blob/a0ed3d065518e1bae71b322aa95fe7b5ac253d7c/Screenshot%202022-10-10%20200523.png)
+
+7) Run the following Commands in command prompt to acquire pico sdk. This will contain both pico-sdk as well as pico-examples directories.
+```
+D:\> git clone -b master https://github.com/raspberrypi/pico-sdk.git
+D:\>cd pico-sdk
+D:\>git submodule update --init
+D:\>cd ..
+D:\> git clone -b master https://github.com/raspberrypi/pico-examples.git
+```
+9) Launch VS code thorugh that command prompt using C:> code command.
+10) Inside, VS Code , Install CMake tools by Microsoft Corporation.
+11) Go to extension settings.
+12) Scroll down to CMake: Configure Environment. Set Item to "PICO_SDK_PATH" and Value to "..\..\pico-sdk"
+13) Scorll down to CMake: Generator. Set Value to "NMake Makefiles'.
+14) Go back to home. You will get a dialog box in bottom right of the screen asking " would like to configure project "pico-examples" ". CLick Yes.
+15) In compiler choices , select "GCC for arm-none-eabi".
+16) After configuration is done, look for a build button on bottom blue bar of the VS Code Window like as follows. Press build.
+17) This Step will build the entire pico_examples directory and save the build files namely .uf2, .elf,.bin to build folder inside the said folder.
 
 #### C) Burning the Program to Microcontroller
 1) From the previous labs configuration, the board would still appear to be circuit py. In this configuration , if we put the .uf2 files inside, it will not be programmed as it will still be reading from the .py file. To change that we have to reset the board and go into bootloader mode.
