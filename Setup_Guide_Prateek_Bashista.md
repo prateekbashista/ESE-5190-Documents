@@ -45,32 +45,49 @@ Following softwares were installed to make the board programming compatible ,and
 ![This is an image](https://github.com/prateekbashista/ESE-5190-Documents/blob/a0ed3d065518e1bae71b322aa95fe7b5ac253d7c/Screenshot%202022-10-10%20200523.png)
 
 7) Run the following Commands in command prompt to acquire pico sdk. This will contain both pico-sdk as well as pico-examples directories.
+
 ```
 D:\> git clone -b master https://github.com/raspberrypi/pico-sdk.git
-D:\>cd pico-sdk
-D:\>git submodule update --init
-D:\>cd ..
+D:\> cd pico-sdk
+D:\> git submodule update --init
+D:\> cd ..
 D:\> git clone -b master https://github.com/raspberrypi/pico-examples.git
 ```
-9) Launch VS code thorugh that command prompt using C:> code command.
+
+8) Launch VS code thorugh that command prompt using C:> code command.
 10) Inside, VS Code , Install CMake tools by Microsoft Corporation.
 11) Go to extension settings.
-12) Scroll down to CMake: Configure Environment. Set Item to "PICO_SDK_PATH" and Value to "..\..\pico-sdk"
-13) Scorll down to CMake: Generator. Set Value to "NMake Makefiles'.
-14) Go back to home. You will get a dialog box in bottom right of the screen asking " would like to configure project "pico-examples" ". CLick Yes.
-15) In compiler choices , select "GCC for arm-none-eabi".
-16) After configuration is done, look for a build button on bottom blue bar of the VS Code Window like as follows. Press build.
-17) This Step will build the entire pico_examples directory and save the build files namely .uf2, .elf,.bin to build folder inside the said folder.
+
+![This is an image](https://github.com/prateekbashista/ESE-5190-Documents/blob/690c17d34e3590003041c7f9ea7a94c7432b8852/Screenshot%202022-10-10%20200852.png)
+
+13) Scroll down to CMake: Configure Environment. Set Item to "PICO_SDK_PATH" and Value to "..\..\pico-sdk"
+14) Scorll down to CMake: Generator. Set Value to "NMake Makefiles'.
+15) Go back to home. You will get a dialog box in bottom right of the screen asking " would like to configure project "pico-examples" ". CLick Yes.
+
+![This is an image](https://github.com/prateekbashista/ESE-5190-Documents/blob/690c17d34e3590003041c7f9ea7a94c7432b8852/Screenshot%202022-10-10%20201802.png)
+
+17) In compiler choices , select "GCC for arm-none-eabi".
+18) After configuration is done, look for a build button on bottom blue bar of the VS Code Window like as follows. Press build.
+
+![This is an image](https://github.com/prateekbashista/ESE-5190-Documents/blob/690c17d34e3590003041c7f9ea7a94c7432b8852/Screenshot%202022-10-10%20202028.png)
+
+20) This Step will build the entire pico_examples directory and save the build files namely .uf2, .elf,.bin to build folder inside the said folder.
 
 #### C) Burning the Program to Microcontroller
 1) From the previous labs configuration, the board would still appear to be circuit py. In this configuration , if we put the .uf2 files inside, it will not be programmed as it will still be reading from the .py file. To change that we have to reset the board and go into bootloader mode.
 2) Connect the board. Hold BOOT button. While holding, press the RESET button. The board will disconnect from the computer and reconnect.
 3) It will appear as RP1-RP2 in your drives sections with 128 MB of memeory. Now the board is ready.
-4) Now go to pico-examples foler > build > hello_world > usb > hello_usb.uf2
-5) Copy the above file and drop in the board memory.
-6) The board will automatically disapper fromt the list of drives.
-7) Board is now running the program. To check, Open PuTTY. select saved states and load the pre saved QTPY board configuration from earlier. If not saved, enter the above mentioned details again. Recheck COM# Port. Click Open.
-8) Following ouptut will appear. 
+
+![This is an image](https://github.com/prateekbashista/ESE-5190-Documents/blob/690c17d34e3590003041c7f9ea7a94c7432b8852/Screenshot%202022-10-10%20203111.png)
+
+5) Now go to pico-examples foler\build\hello_world\usb\hello_usb.uf2
+6) Copy the above file and drop in the board memory.
+7) The board will automatically disapper fromt the list of drives.
+8) Board is now running the program. To check, Open PuTTY. select saved states and load the pre saved QTPY board configuration from earlier. If not saved, enter the above mentioned details again. Recheck COM# Port. Click Open.
+9) Following ouptut will appear. 
+
+
+![This is an image](https://github.com/prateekbashista/ESE-5190-Documents/blob/690c17d34e3590003041c7f9ea7a94c7432b8852/output.png)
 
 
 The board is configured for working with C++ SDK and programmed accordingly without the use of Python or MU Editor.
