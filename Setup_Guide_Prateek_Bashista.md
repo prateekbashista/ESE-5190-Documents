@@ -4,7 +4,6 @@
 - Processor - AMD Ryzen 5 4600 H
 - RAM - 16 GB
 - Operating System : Windows 11 Version 22H2
-- Memory  -  C: 256 Gb(36 GB Left) (Relevant) | D: 1TB
 
 ### References : 
 1) Getting Started with PICO 
@@ -29,8 +28,8 @@
 
 ![This is an image](https://github.com/prateekbashista/ESE-5190-Documents/blob/a0ed3d065518e1bae71b322aa95fe7b5ac253d7c/putty%20saved%20state.png)
 
-   5) Click Open    
-   6) Your Serial Console is setup.
+   4) Click Open    
+   5) Your Serial Console is setup.
    
 #### B) Setting up the board to work with C/C++
 
@@ -55,23 +54,23 @@ D:\> git clone -b master https://github.com/raspberrypi/pico-examples.git
 ```
 
 8) Launch VS code thorugh that command prompt using C:> code command.
-10) Inside, VS Code , Install CMake tools by Microsoft Corporation.
-11) Go to extension settings.
+9) Inside, VS Code , Install CMake tools by Microsoft Corporation.
+10) Go to extension settings.
 
 ![This is an image](https://github.com/prateekbashista/ESE-5190-Documents/blob/690c17d34e3590003041c7f9ea7a94c7432b8852/Screenshot%202022-10-10%20200852.png)
 
-13) Scroll down to CMake: Configure Environment. Set Item to "PICO_SDK_PATH" and Value to "..\..\pico-sdk"
-14) Scorll down to CMake: Generator. Set Value to "NMake Makefiles'.
-15) Go back to home. You will get a dialog box in bottom right of the screen asking " would like to configure project "pico-examples" ". CLick Yes.
+11) Scroll down to CMake: Configure Environment. Set Item to "PICO_SDK_PATH" and Value to "..\..\pico-sdk"
+12) Scorll down to CMake: Generator. Set Value to "NMake Makefiles'.
+13) Go back to home. You will get a dialog box in bottom right of the screen asking " would like to configure project "pico-examples" ". CLick Yes.
 
 ![This is an image](https://github.com/prateekbashista/ESE-5190-Documents/blob/690c17d34e3590003041c7f9ea7a94c7432b8852/Screenshot%202022-10-10%20201802.png)
 
-17) In compiler choices , select "GCC for arm-none-eabi".
-18) After configuration is done, look for a build button on bottom blue bar of the VS Code Window like as follows. Press build.
+14) In compiler choices , select "GCC for arm-none-eabi".
+15) After configuration is done, look for a build button on bottom blue bar of the VS Code Window like as follows. Press build.
 
 ![This is an image](https://github.com/prateekbashista/ESE-5190-Documents/blob/690c17d34e3590003041c7f9ea7a94c7432b8852/Screenshot%202022-10-10%20202028.png)
 
-20) This Step will build the entire pico_examples directory and save the build files namely .uf2, .elf,.bin to build folder inside the said folder.
+16) This Step will build the entire pico_examples directory and save the build files namely .uf2, .elf,.bin to build folder inside the said folder.
 
 #### C) Burning the Program to Microcontroller
 1) From the previous labs configuration, the board would still appear to be circuit py. In this configuration , if we put the .uf2 files inside, it will not be programmed as it will still be reading from the .py file. To change that we have to reset the board and go into bootloader mode.
@@ -80,11 +79,11 @@ D:\> git clone -b master https://github.com/raspberrypi/pico-examples.git
 
 ![This is an image](https://github.com/prateekbashista/ESE-5190-Documents/blob/690c17d34e3590003041c7f9ea7a94c7432b8852/Screenshot%202022-10-10%20203111.png)
 
-5) Now go to pico-examples foler\build\hello_world\usb\hello_usb.uf2
-6) Copy the above file and drop in the board memory.
-7) The board will automatically disapper fromt the list of drives.
-8) Board is now running the program. To check, Open PuTTY. select saved states and load the pre saved QTPY board configuration from earlier. If not saved, enter the above mentioned details again. Recheck COM# Port. Click Open.
-9) Following ouptut will appear. 
+4) Now go to pico-examples foler\build\hello_world\usb\hello_usb.uf2
+5) Copy the above file and drop in the board memory.
+6) The board will automatically disapper fromt the list of drives.
+7) Board is now running the program. To check, Open PuTTY. select saved states and load the pre saved QTPY board configuration from earlier. If not saved, enter the above mentioned details again. Recheck COM# Port. Click Open.
+8) Following ouptut will appear. 
 
 
 ![This is an image](https://github.com/prateekbashista/ESE-5190-Documents/blob/690c17d34e3590003041c7f9ea7a94c7432b8852/output.png)
