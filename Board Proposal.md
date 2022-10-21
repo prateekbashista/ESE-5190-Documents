@@ -46,4 +46,23 @@ https://user-images.githubusercontent.com/23244847/197117846-75629789-27d3-4636-
 
 
 
+### BOARD PROPOSAL
+
+From the above circuit implementation, I notice that the there is some lag between implementation of code of if condition, when both the buttons are pressed together. This can be developed into a mini game.
+
+Rules of the game :
+1) First person to press the button wins the point. 
+2) First person to reach 3 points with the match. 
+
+Estimated Circuit Diagram:
+
+![lab2b-board-proposal](https://user-images.githubusercontent.com/23244847/197123995-1cebceab-6340-4f40-b3cf-60121fe0fdec.png)
+
+Parts Required: 
+1) 6 LEDS  - 3 Red & 3 Blue
+2) Jumper Wires
+3) Resistors
+4) Push Buttons
+
+
 
