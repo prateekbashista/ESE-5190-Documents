@@ -24,4 +24,5 @@ While probe gives readings, it does incorporated noise in it but has better reso
 
 B) Logic Analyzer Probe Connector
 Logic Analyzer probe is better suited to measure the digtal signals as it filters 1) Filters out the noise 2) Have multiple probe to observe more signals. Following results were obtained: 
+
 ![scope_3](https://user-images.githubusercontent.com/23244847/200088433-7867e978-9a74-4c21-af83-c66c4b38b816.png)
