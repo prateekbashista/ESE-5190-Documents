@@ -1,4 +1,4 @@
-# Part 05 : Oscilloscope
+# Part 05 : I2C Traffic
 
 ### System Details
 - Processor - AMD Ryzen 5 4600 H
