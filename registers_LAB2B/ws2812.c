@@ -29,6 +29,7 @@ typedef struct{
     uint32_t stat;
 }boot_stat;
 
+
 void set_neopixel_color(uint32_t color) { 
     // your implementation goes here 
     uint32_t rc = color>>16;
@@ -51,30 +52,33 @@ int main() {
     gpio_set_dir(boot, GPIO_IN);
     stdio_init_all();
     
+    PIO pio = pio0;
+    uint sm = 0;
+
     boot_stat press;
     press.stat = 0x00000000;
 
-    // todo get free sm
-    PIO pio = pio0;
-    int sm = 0;
     uint offset = pio_add_program(pio, &ws2812_program);
-
-
-
     ws2812_program_init(pio, sm, offset, WS2812_PIN, 800000, IS_RGBW);
-    const int y;
-    int t = 0;
 
-    while (1) {
-
-       
-       if(gpio_get(boot)!=0)
+    //while(!stdio_usb_connected());
+    
+ while (1) {  
+     //  printf("%d\n",gpio_get(boot));
+       if(!gpio_get(boot))
        {
+        
         press.stat = 0x00000001;
+        set_neopixel_color(0xFF00FF);
+        sleep_ms(500);
+        set_neopixel_color(0);
+     // printf("%d\n",press.stat);
        }
        else
        {
         press.stat = 0x00000000;
+  
+       // printf("%d\n",press.stat);
        }
 
        if(press.stat){
@@ -82,6 +86,8 @@ int main() {
         sleep_ms(500);
         set_neopixel_color(0);
        }
+        printf("%d\n", press.stat);
+        sleep_ms(50);
       
     }
 }
