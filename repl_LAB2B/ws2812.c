@@ -36,19 +36,29 @@ void register_write(ADDRESS address, VALUE value) {
     *address = value;
 }
 
+#define QTPY_REG ((volatile uint32_t *)(IO_BANK0_BASE + 0x00C))
+
 int main() {
     //set_sys_clock_48();
    
-    uint32_t address; 
     uint32_t value;
+    while(!stdio_usb_connected());
 
     while (1) {
+
         printf("Enter register to access: ");
-        scanf("%x", &address);
-        value = register_read(address);
-        printf("\n %d", value);
+        value = register_read(QTPY_REG);
+        printf("\n %x", value);
+
+        uint32_t reg_write;
+        printf("Enter the value to be written:\n");
+        scanf("%x", &reg_write);
+        register_write(QTPY_REG, reg_write);
+
+        printf("Enter register to access: ");
+        value = register_read(QTPY_REG);
+        printf("\n %x", value);
 
       sleep_ms(1000);
-      
     }
 }
