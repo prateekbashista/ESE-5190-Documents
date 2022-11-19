@@ -19,3 +19,7 @@ typedef struct{
 2) When button is pressed , the register toggles the value obj.stat. 
 3) This value is passed to the if-else conditional statement.
 4) The LED lights up when the button is pressed through the 
+
+
+https://user-images.githubusercontent.com/23244847/202835146-3e802865-c979-44b1-a9a8-2c94053b5a99.mp4
+
