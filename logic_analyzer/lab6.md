@@ -1,4 +1,13 @@
-### LAB 06 ###
+# Part 06 #
+
+### System Details
+- Processor - AMD Ryzen 5 4600 H
+- RAM - 16 GB
+- Operating System : Windows 11 Version 22H2
+
+### References : 
+1) Getting Started with PICO 
+2) C/C++ SDK Development
 
 The work for this lab is based on the logic analyser example of the pio.  The major change was changing the clock divider value to get more accurate samples and capturing the right amount of samples to get a better waveform. 
 
