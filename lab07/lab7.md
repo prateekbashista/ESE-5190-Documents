@@ -1,4 +1,13 @@
-### LAB 07 ###
+# Part 07
+
+### System Details
+- Processor - AMD Ryzen 5 4600 H
+- RAM - 16 GB
+- Operating System : Windows 11 Version 22H2
+
+### References : 
+1) Getting Started with PICO 
+2) C/C++ SDK Development
 
 In this lab, the main objective was to integrate the boot button functionality through the PIO module. This is done by passing the boot button pin through the state machine declarations. Only simple change is declaring the new state machine and writing the adjoining assembly code in .pio file.
 
