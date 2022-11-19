@@ -18,6 +18,7 @@ Next task was to integrate the whole board with pio sequencer:
 2) This user defined function containes the pio enabled board from the previous.
 3) Now , along with rest of the board, the "g" key press invokes the board mode, which gave the control to the custom board leds and buttons.
 
+The final frames of our long video[:)] show the board integration that was implemented in the pio sequencer. As can be seen, in the end, the button on board is pressed and since the blue player only pressed the button, the blue led is switched on.
 
 https://user-images.githubusercontent.com/23244847/202836363-34abac39-badf-4c25-af66-c7bf7e74779a.mp4
 
