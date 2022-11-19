@@ -1,4 +1,13 @@
-### LAB08 ###
+# Part 08
+
+### System Details
+- Processor - AMD Ryzen 5 4600 H
+- RAM - 16 GB
+- Operating System : Windows 11 Version 22H2
+
+### References : 
+1) Getting Started with PICO 
+2) C/C++ SDK Development
 
 The major functionality of part 08 was to make manual communication with APDS9960 sensor. To do so , register level invocation to apds9960 sensor was made. The objective was to switch on the 
 board, the ALS engine and the proximity sensor engine. 
